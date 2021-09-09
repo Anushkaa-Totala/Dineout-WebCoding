@@ -11,6 +11,7 @@ import ActiveLastBreadcrumb from '../Components/BreadcrumMenu';
 import RadioButtonsGroup from '../Components/Buttons and Input/RadioButtons';
 import CustomizedRadios from '../Components/Buttons and Input/CustomRadio';
 import CircularIndeterminate from '../Components/ProgressBar';
+import ControlledAccordions from '../Components/Accordian';
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
             <SimpleCard/>
             <SwipeableTextMobileStepper/>
             <BasicButtonGroup/>
+            <ControlledAccordions/>
             <RadioButtonsGroup/>
             <Checkboxes/>
             <FloatingActionButtons/>
