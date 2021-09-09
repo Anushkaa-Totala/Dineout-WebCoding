@@ -5,6 +5,7 @@ import Home from './Pages/Home.js'
 import Gallery from './Pages/Gallery.js'
 import Hotels from './Pages/Hotels.js'
 import PrimarySearchAppBar from './Components/AppBarSearch';
+import LabelBottomNavigation from './Components/BottomNavigation';
 
 
 function App() {
@@ -24,7 +25,9 @@ function App() {
           </Switch>
 
       <footer className="App-footer">
-        This is a footer
+        <LabelBottomNavigation/>
+       
+       This is a footer
       </footer>
     </div>
   );

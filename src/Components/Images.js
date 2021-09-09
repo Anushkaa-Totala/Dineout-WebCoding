@@ -6,17 +6,21 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
+    label: 'One',
     imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
   },
   {
     label: 'Bird',
     imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      '',
   },
   {
     label: 'Bali, Indonesia',
@@ -49,14 +53,14 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     height: 255,
+    display: 'block',
     maxWidth: 400,
     overflow: 'hidden',
-    display: 'block',
     width: '100%',
   },
 }));
 
-export default function TextMobileStepper() {
+function SwipeableTextMobileStepper() {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -70,16 +74,29 @@ export default function TextMobileStepper() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
+  const handleStepChange = (step) => {
+    setActiveStep(step);
+  };
+
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
-      <img
-        className={classes.img}
-        src={tutorialSteps[activeStep].imgPath}
-        alt={tutorialSteps[activeStep].label}
-      />
+      <AutoPlaySwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={activeStep}
+        onChangeIndex={handleStepChange}
+        enableMouseEvents
+      >
+        {tutorialSteps.map((step, index) => (
+          <div key={step.label}>
+            {Math.abs(activeStep - index) <= 2 ? (
+              <img className={classes.img} src={step.imgPath} alt={step.label} />
+            ) : null}
+          </div>
+        ))}
+      </AutoPlaySwipeableViews>
       <MobileStepper
         steps={maxSteps}
         position="static"
@@ -101,3 +118,5 @@ export default function TextMobileStepper() {
     </div>
   );
 }
+
+export default SwipeableTextMobileStepper;
