@@ -17,7 +17,7 @@ import ControlledAccordions from '../Components/Accordian';
 export default function Home() {
   return (
     <React.Fragment>
-        <Container fixed>
+        <Container>
             <p>
                 Welcome to your web application. Make something beautiful!
             </p>

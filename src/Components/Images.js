@@ -18,9 +18,9 @@ const tutorialSteps = [
       'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
   },
   {
-    label: 'Bird',
+    label: 'Happy',
     imgPath:
-      '',
+      'https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80',
   },
   {
     label: 'Bali, Indonesia',
