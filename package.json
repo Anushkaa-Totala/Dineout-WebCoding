@@ -45,5 +45,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "Wellcome to your first web application.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anushkaa-Totala/Dineout-WebCoding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anushkaa-Totala/Dineout-WebCoding/issues"
   }
 }

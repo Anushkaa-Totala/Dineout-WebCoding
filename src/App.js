@@ -2,9 +2,11 @@ import './App.css';
 import ButtonAppBar from './Components/AppBar.js'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home.js'
-import Gallery from './Pages/Gallery.js'
-import Hotels from './Pages/Hotels.js'
-import Offers from './Pages/Offers.js'
+import SignUp from './Pages/SignUp'
+import Login from './Pages/Login'
+import HamburgerMenu from './Pages/HamburgerMenu'
+import LocationPopUp from './Pages/LocationPopUp'
+
 import PrimarySearchAppBar from './Components/AppBarSearch';
 import LabelBottomNavigation from './Components/BottomNavigation';
 
@@ -21,9 +23,10 @@ function App() {
           <Switch>
             <Route path={process.env.PUBLIC_URL + '/'} exact > <Home/> </Route>
             <Route path={process.env.PUBLIC_URL + '/home'} > <Home/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/gallery'}  > <Gallery/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/hotels'}  > <Hotels/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/offers'}  > <Offers/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/signup'}  > <SignUp/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/login'}  > <Login/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/menu'}  > <HamburgerMenu/> </Route>
+            <Route path={process.env.PUBLIC_URL + '/selectlocation'}  > <LocationPopUp/> </Route>
           </Switch>
 
       <footer className="App-footer">
