@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/Dineout-WebCoding/static/css/main.af840fbd.chunk.css",
-    "main.js": "/Dineout-WebCoding/static/js/main.352322e1.chunk.js",
-    "main.js.map": "/Dineout-WebCoding/static/js/main.352322e1.chunk.js.map",
+    "main.js": "/Dineout-WebCoding/static/js/main.9fd6082c.chunk.js",
+    "main.js.map": "/Dineout-WebCoding/static/js/main.9fd6082c.chunk.js.map",
     "runtime-main.js": "/Dineout-WebCoding/static/js/runtime-main.1e4f9f2b.js",
     "runtime-main.js.map": "/Dineout-WebCoding/static/js/runtime-main.1e4f9f2b.js.map",
-    "static/js/2.071107f6.chunk.js": "/Dineout-WebCoding/static/js/2.071107f6.chunk.js",
-    "static/js/2.071107f6.chunk.js.map": "/Dineout-WebCoding/static/js/2.071107f6.chunk.js.map",
+    "static/js/2.d64878c2.chunk.js": "/Dineout-WebCoding/static/js/2.d64878c2.chunk.js",
+    "static/js/2.d64878c2.chunk.js.map": "/Dineout-WebCoding/static/js/2.d64878c2.chunk.js.map",
     "index.html": "/Dineout-WebCoding/index.html",
     "static/css/main.af840fbd.chunk.css.map": "/Dineout-WebCoding/static/css/main.af840fbd.chunk.css.map",
-    "static/js/2.071107f6.chunk.js.LICENSE.txt": "/Dineout-WebCoding/static/js/2.071107f6.chunk.js.LICENSE.txt",
+    "static/js/2.d64878c2.chunk.js.LICENSE.txt": "/Dineout-WebCoding/static/js/2.d64878c2.chunk.js.LICENSE.txt",
     "static/media/logo.355735b3.svg": "/Dineout-WebCoding/static/media/logo.355735b3.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1e4f9f2b.js",
-    "static/js/2.071107f6.chunk.js",
+    "static/js/2.d64878c2.chunk.js",
     "static/css/main.af840fbd.chunk.css",
-    "static/js/main.352322e1.chunk.js"
+    "static/js/main.9fd6082c.chunk.js"
   ]
 }
