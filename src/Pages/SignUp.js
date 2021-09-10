@@ -1,5 +1,10 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
+import BasicButtonGroup from '../Components/Buttons/ButtonGroup';
+import ContainedButtons from '../Components/Buttons/Buttons';
+import NameTextFields from '../Components/InputFields/NameInputText';
+import NumTextFields from '../Components/InputFields/NumberInputText copy';
+import CustomizedSteppers from '../Components/Stepper';
 
 export default function Home() {
     return (
@@ -8,7 +13,14 @@ export default function Home() {
               <p>
                   SIGNUP
               </p>
-              
+              <CustomizedSteppers/>
+              <NameTextFields/>
+              <NumTextFields/>
+              <p>
+               OR Sign in with
+                </p>
+              <BasicButtonGroup/>
+              <ContainedButtons/>
                        </Container>
       </React.Fragment>
     );

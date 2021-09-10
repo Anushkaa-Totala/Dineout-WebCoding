@@ -5,7 +5,6 @@ import Home from './Pages/Home.js'
 import SignUp from './Pages/SignUp'
 import Login from './Pages/Login'
 import HamburgerMenu from './Pages/HamburgerMenu'
-import LocationPopUp from './Pages/LocationPopUp'
 
 import PrimarySearchAppBar from './Components/AppBarSearch';
 import LabelBottomNavigation from './Components/BottomNavigation';
@@ -26,7 +25,6 @@ function App() {
             <Route path={process.env.PUBLIC_URL + '/signup'}  > <SignUp/> </Route>
             <Route path={process.env.PUBLIC_URL + '/login'}  > <Login/> </Route>
             <Route path={process.env.PUBLIC_URL + '/menu'}  > <HamburgerMenu/> </Route>
-            <Route path={process.env.PUBLIC_URL + '/selectlocation'}  > <LocationPopUp/> </Route>
           </Switch>
 
       <footer className="App-footer">
