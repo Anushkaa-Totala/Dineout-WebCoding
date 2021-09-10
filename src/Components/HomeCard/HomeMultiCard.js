@@ -7,6 +7,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import BasicTextFields from './TextFields';
 import DatePickers from './DateTimePicker';
+import BasicButtonGroup from '../Buttons/ButtonGroup';
+import GroupOrientation from '../VerticalButtonGroup';
 
 const useStyles = makeStyles({
   root: {
@@ -32,11 +34,12 @@ export default function SimpleCard() {
   return (
     <Card className={classes.root}>
       <CardContent>
-        <DatePickers/>
-        <BasicTextFields/>
+        
+        LOCATION
+        
       </CardContent>
       <CardActions>
-        <Button size="small">Search</Button>
+        <GroupOrientation/>
       </CardActions>
     </Card>
   );

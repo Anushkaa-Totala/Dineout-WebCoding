@@ -9,11 +9,12 @@ export default function Home() {
     <React.Fragment>
         <Container>
 
-        <SimpleBackdrop/> 
-
-            <p>
+             <p>
                 Welcome to your web application. Make something beautiful!
             </p>
+
+            <SimpleBackdrop/>
+            
              <SwipeableTextMobileStepper/> 
 
              <p>
