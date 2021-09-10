@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import SingleLineImageList from './Components/SingleLineImageList';
+
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
                 Welcome to your web application. Make something beautiful!
             </p>
                      
-          <SingleLineImageList/>
+          
 
          </Container>
     </React.Fragment>
