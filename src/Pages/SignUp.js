@@ -7,21 +7,14 @@ import NumTextFields from '../Components/InputFields/NumberInputText copy';
 import CustomizedSteppers from '../Components/Stepper';
 
 export default function Home() {
-    return (
-      <React.Fragment>
-          <Container>
-              <p>
-                  SIGNUP
-              </p>
-              <CustomizedSteppers/>
-              <NameTextFields/>
-              <NumTextFields/>
-              <p>
-               OR Sign in with
-                </p>
-              <BasicButtonGroup/>
-              <ContainedButtons/>
-                       </Container>
-      </React.Fragment>
-    );
-  }
+  return (
+    <React.Fragment>
+      <Container>
+        <p>
+          SIGNUP
+        </p>
+        <CustomizedSteppers />
+      </Container>
+    </React.Fragment>
+  );
+}

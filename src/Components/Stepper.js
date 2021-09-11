@@ -1,10 +1,14 @@
 import React from 'react';
-import { makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import BasicButtonGroup from '../Components/Buttons/ButtonGroup';
+import ContainedButtons from '../Components/Buttons/Buttons';
+import NameTextFields from '../Components/InputFields/NameInputText';
+import NumTextFields from '../Components/InputFields/NumberInputText copy';
 
 
 
@@ -22,19 +26,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+  return ['Personal Details', 'Verification', 'Set Location'];
 }
 
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return 'Select campaign settings...';
+      return 'Personal Details';
     case 1:
-      return 'What is an ad group anyways?';
+      return 'Verification';
     case 2:
-      return 'This is the bit I really care about!';
+      return 'Set Location';
     default:
-      return 'Unknown step';
+      return 'Reset all steps';
   }
 }
 
@@ -64,7 +68,14 @@ export default function CustomizedSteppers() {
           </Step>
         ))}
       </Stepper>
-            
+
+      <NameTextFields/>
+              <NumTextFields/>
+              <p>
+               OR Sign in with
+                </p>
+              <BasicButtonGroup/>
+             
       <div>
         {activeStep === steps.length ? (
           <div>
@@ -74,6 +85,13 @@ export default function CustomizedSteppers() {
             <Button onClick={handleReset} className={classes.button}>
               Reset
             </Button>
+            <Button
+                variant="contained"
+                color="primary"
+                className={classes.button}
+              >
+                Finish 
+              </Button>
           </div>
         ) : (
           <div>
@@ -92,6 +110,8 @@ export default function CustomizedSteppers() {
               </Button>
             </div>
           </div>
+
+
         )}
       </div>
     </div>
