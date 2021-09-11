@@ -16,7 +16,7 @@ export default function NumTextFields() {
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-          <TextField id="outlined-basic" label="Phone Number" variant="outlined" />
+      <TextField id="outlined-basic" label="Phone Number" variant="outlined" />
     </form>
   );
 }

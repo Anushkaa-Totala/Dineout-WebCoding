@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import SwipeableTextMobileStepper from '../Components/Carasouel';
 import SimpleBackdrop from '../Components/PopUp';
+import SingleLineImageList from '../Components/SingleLineImage';
 
 
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
             <p>
             Top Picks
             </p>     
-             
+             <SingleLineImageList/>
 
             <p>
             Super Savers
