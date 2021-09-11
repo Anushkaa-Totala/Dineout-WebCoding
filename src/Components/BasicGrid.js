@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import { Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,8 +23,11 @@ export default function BasicGrid() {
       <Grid container spacing={3}>
           
         <Grid item md ={3} xs={12}>
+         <Hidden xsDown>
           <Paper className={classes.paper}>The logo, spanning 1 of 3</Paper>
-        </Grid>
+          </Hidden>
+         </Grid>
+               
 
         <Grid item md={9}xs={12}>
           <Paper className={classes.paper}>The navigation, spanning 2 of 3</Paper>
