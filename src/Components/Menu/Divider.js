@@ -38,7 +38,7 @@ export default function InsetDividers() {
             <WorkIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Terms Conditions"/>
+        <ListItemText primary="Terms and Conditions"/>
       </ListItem>
       <Divider variant="inset" component="li" />
       <ListItem>

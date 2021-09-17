@@ -11,12 +11,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function BasicTextFields() {
+export default function NameInput() {
   const classes = useStyles();
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="standard-basic" label="Standard" />
+      <TextField id="Name" label="Name" variant="outlined" />
     </form>
   );
 }

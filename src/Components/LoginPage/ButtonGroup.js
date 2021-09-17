@@ -19,10 +19,10 @@ export default function BasicButtonGroup() {
 
   return (
     <div className={classes.root}>
-      <ButtonGroup color="primary" aria-label="outlined primary button group">
+            <ButtonGroup variant="outlined" color="primary" aria-label="contained primary button group">
         <Button>Google</Button>
         <Button>Facebook</Button>
       </ButtonGroup>
-    </div>
+      </div>
   );
 }

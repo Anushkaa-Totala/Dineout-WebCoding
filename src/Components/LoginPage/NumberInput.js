@@ -11,12 +11,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NumTextFields() {
+export default function NumberInput() {
   const classes = useStyles();
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="outlined-basic" label="Phone Number" variant="outlined" />
+      <TextField id="Name" label="Phone Number/Email" variant="outlined" />
     </form>
   );
 }

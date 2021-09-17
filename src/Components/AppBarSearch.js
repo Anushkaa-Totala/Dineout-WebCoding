@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   search: {
-    position: 'relative',
+    position: 'sticky',
     borderRadius: theme.shape.borderRadius,
     backgroundColor: alpha(theme.palette.common.white, 0.15),
     '&:hover': {
@@ -78,6 +78,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
+      <PrimarySearchAppBar position="sticky"></PrimarySearchAppBar>
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -151,9 +152,7 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Dineout 
-          </Typography>
+          
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
