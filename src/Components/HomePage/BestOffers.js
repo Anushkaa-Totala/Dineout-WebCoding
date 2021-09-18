@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 
+
 const tutorialSteps = [     //adding all the image links
   {
     imgPath:
@@ -77,19 +78,17 @@ export default function BestOffers() {
       <MobileStepper
         variant="dots"
         steps={4} // setting number of slides
-        position="static"
+        position="center"
         activeStep={activeStep}
         className={classes.root}
         nextButton={
           <Button size="small" onClick={handleNext} disabled={activeStep === 3}>
-            Next
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            Back
           </Button>
         }
       />
