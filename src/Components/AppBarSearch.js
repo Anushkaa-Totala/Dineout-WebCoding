@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
-      <PrimarySearchAppBar position="sticky"></PrimarySearchAppBar>
+  <PrimarySearchAppBar position="sticky"></PrimarySearchAppBar>
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -98,7 +98,7 @@ export default function PrimarySearchAppBar() {
     handleMobileMenuClose();
   };
 
-    const menuId = 'primary-search-account-menu';
+  const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
@@ -125,7 +125,7 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-     
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -152,7 +152,7 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          
+
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -168,7 +168,7 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-          
+
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -180,7 +180,7 @@ export default function PrimarySearchAppBar() {
               <AccountCircle />
             </IconButton>
           </div>
-       
+
         </Toolbar>
       </AppBar>
       {renderMobileMenu}

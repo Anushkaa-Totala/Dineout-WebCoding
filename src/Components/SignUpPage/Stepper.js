@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
 function getSteps() {
   return ['Input Details', 'OTP Verification', 'Select Location'];
+  //naming the steps 
 }
 
 function getStepContent(stepIndex) {
@@ -64,7 +65,7 @@ export default function HorizontalLabelPositionBelowStepper() {
           </Step>
         ))}
       </Stepper>
-           <div>
+      <div>
         {activeStep === steps.length ? (
           <div>
             <Typography className={classes.instructions}>All steps completed</Typography>
@@ -76,8 +77,8 @@ export default function HorizontalLabelPositionBelowStepper() {
           <div>
             <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
             <div>
-                <NameInput/>
-            <NumberInput/>
+              <NameInput />
+              <NumberInput />
               <Button
                 disabled={activeStep === 0}
                 onClick={handleBack}

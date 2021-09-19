@@ -24,9 +24,10 @@ export default function HomeGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={5}>
-
+ 
+          {/* adding all components sequentially in grids */}
         <Grid item xs={5}>
-          <PopUp />
+          <PopUp /> 
         </Grid>
 
         <Grid item xs={12}>

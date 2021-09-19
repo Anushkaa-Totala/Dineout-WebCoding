@@ -18,6 +18,7 @@ export default function LoginButton() {
             <Button variant="contained" color="secondary">
                 Login
             </Button>
+            {/* Simple Button for completing login step */}
         </div>
     );
 }

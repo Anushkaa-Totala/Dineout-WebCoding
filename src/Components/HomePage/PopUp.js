@@ -25,10 +25,12 @@ export default function SimpleBackdrop() {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleToggle}>
-        <LocationOnIcon/>
+        <LocationOnIcon />
+        {/* //What appears on the pop up button */}
       </Button>
       <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
-        <SimpleCard/>
+        <SimpleCard />
+        {/* dialogue box */}
       </Backdrop>
     </div>
   );

@@ -23,6 +23,7 @@ export default function MenuGrid() {
     return (
         <div className={classes.root}>
             <Grid container spacing={3}>
+                {/* adding all components sequentially in grids */}
                 <Grid item xs={12}>
                     <p>
                         MENU
@@ -30,7 +31,7 @@ export default function MenuGrid() {
                 </Grid>
 
                 <Grid item xs={12}>
-                   <LoginButton/>
+                    <LoginButton />
                 </Grid>
                 <Grid item xs={12}>
                     <p>
@@ -38,10 +39,10 @@ export default function MenuGrid() {
                     </p>
                 </Grid>
                 <Grid item xs={12}>
-                   <BasicButtonGroup/>
+                    <BasicButtonGroup />
                 </Grid>
                 <Grid item xs={12}>
-                <InsetDividers/>
+                    <InsetDividers />
                 </Grid>
             </Grid>
         </div>

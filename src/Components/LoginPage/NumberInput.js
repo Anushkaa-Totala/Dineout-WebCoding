@@ -17,6 +17,7 @@ export default function NumberInput() {
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <TextField id="Name" label="Phone Number/Email" variant="outlined" />
+      {/* adding the input field */}
     </form>
   );
 }

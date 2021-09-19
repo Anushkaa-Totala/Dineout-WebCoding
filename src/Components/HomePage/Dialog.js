@@ -28,13 +28,16 @@ export default function PopUp() {
                 aria-describedby="alert-dialog-description"
             >
                 <DialogTitle id="alert-dialog-title">{"Find Location"}</DialogTitle>
-
+                {/* titlle on dialogue box */}
                 <DialogActions>
+                    {/* content on dialogue box */}
                     <Button onClick={handleClose} color="primary">
                         Detect Location
+                        {/* option one*/}
                     </Button>
                     <Button onClick={handleClose} color="primary" autoFocus>
                         Select Location
+                        {/* option two*/}
                     </Button>
                 </DialogActions>
             </Dialog>

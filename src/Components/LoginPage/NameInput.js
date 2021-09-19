@@ -17,6 +17,7 @@ export default function NameInput() {
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <TextField id="Name" label="Name" variant="outlined" />
+      {/* adding the input field */}
     </form>
   );
 }

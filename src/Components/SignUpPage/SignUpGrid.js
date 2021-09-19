@@ -23,14 +23,15 @@ export default function SignUpGrid() {
     return (
         <div className={classes.root}>
             <Grid container spacing={3}>
+                {/* adding all components sequentially in grids */}
                 <Grid item xs={12}>
-                <HorizontalLabelPositionBelowStepper/>
+                    <HorizontalLabelPositionBelowStepper />
                 </Grid>
 
                 <Grid item xs={12}>
-                
+
                 </Grid>
-                
+
             </Grid>
         </div>
     );

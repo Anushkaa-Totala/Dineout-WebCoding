@@ -19,10 +19,11 @@ export default function BasicButtonGroup() {
 
   return (
     <div className={classes.root}>
-            <ButtonGroup variant="outlined" color="primary" aria-label="contained primary button group">
+      {/* adding the button group for two shortcut login options */}
+      <ButtonGroup variant="outlined" color="primary" aria-label="contained primary button group">
         <Button>Google</Button>
         <Button>Facebook</Button>
       </ButtonGroup>
-      </div>
+    </div>
   );
 }

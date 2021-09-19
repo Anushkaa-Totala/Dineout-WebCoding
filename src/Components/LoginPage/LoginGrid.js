@@ -24,6 +24,7 @@ export default function LoginGrid() {
     return (
         <div className={classes.root}>
             <Grid container spacing={3}>
+                {/* adding all components sequentially in grids */}
                 <Grid item xs={12}>
                     <p>
                         LOGIN
@@ -42,10 +43,10 @@ export default function LoginGrid() {
                     </p>
                 </Grid>
                 <Grid item xs={12}>
-                   <BasicButtonGroup/>
+                    <BasicButtonGroup />
                 </Grid>
                 <Grid item xs={12}>
-                 <LoginButton/>
+                    <LoginButton />
                 </Grid>
             </Grid>
         </div>
