@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import SimpleCard from './HomeCard/HomeMultiCard';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 
+
 const useStyles = makeStyles((theme) => ({
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
@@ -24,7 +25,7 @@ export default function SimpleBackdrop() {
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleToggle}>
+      <Button variant="outlined" color="primary"  position= "sticky" onClick={handleToggle}>
         <LocationOnIcon />
         {/* //What appears on the pop up button */}
       </Button>

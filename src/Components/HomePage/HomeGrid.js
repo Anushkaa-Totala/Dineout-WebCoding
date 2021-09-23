@@ -6,6 +6,8 @@ import RestaurantsNearYou from './RestaurantsNear';
 import SuperSavers from './SuperSavers';
 import TopP from '../TopPicks';
 import PopUp from './Dialog';
+import Promotionals from './Promotionals';
+import LoginButton from '../LoginPage/LoginButton';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,8 +27,13 @@ export default function HomeGrid() {
     <div className={classes.root}>
       <Grid container spacing={5}>
  
+      <Grid item xs={12}>
+        <LoginButton/> 
+        </Grid>
+
           {/* adding all components sequentially in grids */}
-        <Grid item xs={5}>
+        <Grid item xs={10}>
+          <Promotionals/>
           <PopUp /> 
         </Grid>
 

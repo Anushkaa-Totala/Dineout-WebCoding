@@ -15,7 +15,7 @@ export default function LoginButton() {
 
     return (
         <div className={classes.root}>
-            <Button variant="contained" color="secondary">
+            <Button variant="contained" color="secondary" position='sticky'>
                 Login
             </Button>
             {/* Simple Button for completing login step */}

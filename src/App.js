@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       {/* Header (Navigation Bar) */}
       <header className="App-header">
-        <PrimarySearchAppBar />
+       
       </header>
 
       {/* Router - Pages */}
@@ -28,7 +28,7 @@ function App() {
       </Switch>
 
       <footer className="App-footer">
-        <LabelBottomNavigation />
+        
       </footer>
     </div>
   );
