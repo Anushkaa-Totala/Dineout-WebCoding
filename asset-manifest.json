@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/Dineout-WebCoding/static/css/main.af840fbd.chunk.css",
-    "main.js": "/Dineout-WebCoding/static/js/main.0b4df288.chunk.js",
-    "main.js.map": "/Dineout-WebCoding/static/js/main.0b4df288.chunk.js.map",
+    "main.js": "/Dineout-WebCoding/static/js/main.40c8645f.chunk.js",
+    "main.js.map": "/Dineout-WebCoding/static/js/main.40c8645f.chunk.js.map",
     "runtime-main.js": "/Dineout-WebCoding/static/js/runtime-main.1e4f9f2b.js",
     "runtime-main.js.map": "/Dineout-WebCoding/static/js/runtime-main.1e4f9f2b.js.map",
-    "static/js/2.8240b48c.chunk.js": "/Dineout-WebCoding/static/js/2.8240b48c.chunk.js",
-    "static/js/2.8240b48c.chunk.js.map": "/Dineout-WebCoding/static/js/2.8240b48c.chunk.js.map",
+    "static/js/2.013fc57e.chunk.js": "/Dineout-WebCoding/static/js/2.013fc57e.chunk.js",
+    "static/js/2.013fc57e.chunk.js.map": "/Dineout-WebCoding/static/js/2.013fc57e.chunk.js.map",
     "index.html": "/Dineout-WebCoding/index.html",
     "static/css/main.af840fbd.chunk.css.map": "/Dineout-WebCoding/static/css/main.af840fbd.chunk.css.map",
-    "static/js/2.8240b48c.chunk.js.LICENSE.txt": "/Dineout-WebCoding/static/js/2.8240b48c.chunk.js.LICENSE.txt",
+    "static/js/2.013fc57e.chunk.js.LICENSE.txt": "/Dineout-WebCoding/static/js/2.013fc57e.chunk.js.LICENSE.txt",
     "static/media/TopPick1.10e81fda.png": "/Dineout-WebCoding/static/media/TopPick1.10e81fda.png",
     "static/media/TopPick2.2e62377c.png": "/Dineout-WebCoding/static/media/TopPick2.2e62377c.png",
     "static/media/TopPick3.565c0765.png": "/Dineout-WebCoding/static/media/TopPick3.565c0765.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1e4f9f2b.js",
-    "static/js/2.8240b48c.chunk.js",
+    "static/js/2.013fc57e.chunk.js",
     "static/css/main.af840fbd.chunk.css",
-    "static/js/main.0b4df288.chunk.js"
+    "static/js/main.40c8645f.chunk.js"
   ]
 }
