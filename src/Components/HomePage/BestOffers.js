@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import { Link, Router } from "react-router-dom";
 
 
 const tutorialSteps = [     //adding all the image links
@@ -64,17 +65,22 @@ export default function BestOffers() {
 
   return (
     <div className={classes.root}>
-      <Paper square elevation={0} className={classes.header}>
-        <p>
-          Best Offers
-          {/* //setting title label */}
-        </p>
-      </Paper>
-      <img
-        className={classes.img}
-        src={tutorialSteps[activeStep].imgPath}
-        alt={tutorialSteps[activeStep].label}
-      />
+
+      <Link to={process.env.PUBLIC_URL + '/login'}>
+        <Paper square elevation={0} className={classes.header}>
+          <p>
+            Best Offers
+            {/* //setting title label */}
+          </p>
+        </Paper>
+        <img
+          className={classes.img}
+          src={tutorialSteps[activeStep].imgPath}
+          alt={tutorialSteps[activeStep].label}
+        />
+      </Link>
+
+
       <MobileStepper
         variant="dots"
         steps={4} // setting number of slides

@@ -27,10 +27,6 @@ export default function HomeGrid() {
     <div className={classes.root}>
       <Grid container spacing={5}>
  
-      <Grid item xs={12}>
-        <LoginButton/> 
-        </Grid>
-
           {/* adding all components sequentially in grids */}
         <Grid item xs={10}>
           <Promotionals/>
