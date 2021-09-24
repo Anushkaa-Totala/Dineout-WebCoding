@@ -8,6 +8,7 @@ import TopP from '../TopPicks';
 import PopUp from './Dialog';
 import Promotionals from './Promotionals';
 import LoginButton from '../LoginPage/LoginButton';
+import SimpleCard from './card';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,6 +49,10 @@ export default function HomeGrid() {
 
         <Grid item xs={12}>
           <SuperSavers />
+        </Grid>
+
+        <Grid item xs={12}>
+     <SimpleCard/>
         </Grid>
 
       </Grid>
