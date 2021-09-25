@@ -4,23 +4,29 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import PersonPinIcon from '@material-ui/icons/PersonPin';
+import { Link } from 'react-router-dom';
+import { IconButton } from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
+import Loading from './DetectLocation';
+import ControlledOpenSelect from './dropdown';
 
 export default function PopUp() {
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
 
     const handleClickOpen = () => {
-        setOpen(true);
+        setOpen(false);
     };
 
     const handleClose = () => {
         setOpen(false);
     };
 
+    const loading = () => {
+        setOpen(false);
+    };
+
     return (
         <div>
-            <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-                <PersonPinIcon />
-            </Button>
             <Dialog
                 open={open}
                 onClose={handleClose}
@@ -29,16 +35,28 @@ export default function PopUp() {
             >
                 <DialogTitle id="alert-dialog-title">{"Find Location"}</DialogTitle>
                 {/* titlle on dialogue box */}
+
+                <Link to={process.env.PUBLIC_URL + '/home'}>
+                    <IconButton onClick={handleClose} color="primary" autoFocus>
+                        <CloseIcon />
+                    </IconButton>
+                </Link>
+
                 <DialogActions>
                     {/* content on dialogue box */}
-                    <Button onClick={handleClose} color="primary">
-                        Detect Location
-                        {/* option one*/}
-                    </Button>
-                    <Button onClick={handleClose} color="primary" autoFocus>
-                        Select Location
-                        {/* option two*/}
-                    </Button>
+
+                    <ControlledOpenSelect />
+                    <Link to={process.env.PUBLIC_URL + '/home'}>
+                        <Loading />
+                    </Link>
+
+                    <Link to={process.env.PUBLIC_URL + '/home'}>
+                        <Button onClick={handleClose} color="primary" autoFocus>
+                            Confirm
+                        </Button>
+                    </Link>
+
+                  
                 </DialogActions>
             </Dialog>
         </div>

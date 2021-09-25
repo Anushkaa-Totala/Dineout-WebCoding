@@ -15,9 +15,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleBackdrop() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const handleClose = () => {
-    setOpen(false);
+    setOpen(true);
   };
   const handleToggle = () => {
     setOpen(!open);
@@ -25,12 +25,10 @@ export default function SimpleBackdrop() {
 
   return (
     <div>
-      <Button variant="default" color="rgb(255, 99, 71)"  position= "sticky" onClick={handleToggle}>
-        <LocationOnIcon />
-        {/* //What appears on the pop up button */}
-      </Button>
+    
+      
       <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
-        <SimpleCard />
+        {/* <SimpleCard /> */}
         {/* dialogue box */}
       </Backdrop>
     </div>

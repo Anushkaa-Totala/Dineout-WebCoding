@@ -9,6 +9,10 @@ import PopUp from './Dialog';
 import Promotionals from './Promotionals';
 import LoginButton from '../LoginPage/LoginButton';
 import SimpleCard from './card';
+import {Link, Router} from "react-router-dom";
+import { Button } from '@material-ui/core';
+import card1 from './card';
+import MediaCard from './card';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,12 +30,13 @@ export default function HomeGrid() {
       justifyContent="center"
       alignItems="center">
 
-        {/* adding all components sequentially in grids */}
-        <Grid item xs={10}>
-          <Promotionals />
-          <PopUp />
-        </Grid>
+<PopUp />
 
+        {/* adding all components sequentially in grids */}
+        <Grid item xs={12}>
+          <Promotionals />
+        </Grid>
+      
         <Grid item xs={10}>
           <BestOffers />
         </Grid>
