@@ -25,7 +25,7 @@ export default function SimpleBackdrop() {
 
   return (
     <div>
-      <Button variant="outlined" color="primary"  position= "sticky" onClick={handleToggle}>
+      <Button variant="default" color="rgb(255, 99, 71)"  position= "sticky" onClick={handleToggle}>
         <LocationOnIcon />
         {/* //What appears on the pop up button */}
       </Button>

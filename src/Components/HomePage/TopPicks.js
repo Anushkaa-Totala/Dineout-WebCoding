@@ -2,9 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageList from '@material-ui/core/ImageList';
 import ImageListItem from '@material-ui/core/ImageListItem';
-import image from '../Assets/TopPick1.png'
-import image2 from '../Assets/TopPick2.png'
-import image3 from '../Assets/TopPick3.png'
+import image from '../../Assets/TopPick1.png'
+import image2 from '../../Assets/TopPick2.png'
+import image3 from '../../Assets/TopPick3.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -9,7 +9,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import {Link, Router} from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -170,17 +170,10 @@ export default function PrimarySearchAppBar() {
           <div className={classes.sectionDesktop}>
 
             <Link to={process.env.PUBLIC_URL + '/menu'}>
-              <IconButton>
+              <IconButton href="">
                 <AccountCircle />
               </IconButton>
             </Link>
-
-            <Link to={process.env.PUBLIC_URL + '/login'}>
-              <Button variant="contained" color="primary" href="">
-                Link
-              </Button>
-            </Link>
-
 
           </div>
 
