@@ -14,7 +14,7 @@
 .App-footer {
   background-color: #282c34;
   color: white;
-  position: fixed;
+  position: sticky;
   left: 0;
   bottom: 0;
   width: 100%;
