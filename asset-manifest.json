@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Dineout-WebCoding/static/css/main.c3687b39.chunk.css",
-    "main.js": "/Dineout-WebCoding/static/js/main.6623fb8f.chunk.js",
-    "main.js.map": "/Dineout-WebCoding/static/js/main.6623fb8f.chunk.js.map",
+    "main.js": "/Dineout-WebCoding/static/js/main.5b946f4f.chunk.js",
+    "main.js.map": "/Dineout-WebCoding/static/js/main.5b946f4f.chunk.js.map",
     "runtime-main.js": "/Dineout-WebCoding/static/js/runtime-main.1e4f9f2b.js",
     "runtime-main.js.map": "/Dineout-WebCoding/static/js/runtime-main.1e4f9f2b.js.map",
-    "static/js/2.e50cf0a1.chunk.js": "/Dineout-WebCoding/static/js/2.e50cf0a1.chunk.js",
-    "static/js/2.e50cf0a1.chunk.js.map": "/Dineout-WebCoding/static/js/2.e50cf0a1.chunk.js.map",
+    "static/js/2.ce714bc2.chunk.js": "/Dineout-WebCoding/static/js/2.ce714bc2.chunk.js",
+    "static/js/2.ce714bc2.chunk.js.map": "/Dineout-WebCoding/static/js/2.ce714bc2.chunk.js.map",
     "index.html": "/Dineout-WebCoding/index.html",
     "static/css/main.c3687b39.chunk.css.map": "/Dineout-WebCoding/static/css/main.c3687b39.chunk.css.map",
-    "static/js/2.e50cf0a1.chunk.js.LICENSE.txt": "/Dineout-WebCoding/static/js/2.e50cf0a1.chunk.js.LICENSE.txt",
+    "static/js/2.ce714bc2.chunk.js.LICENSE.txt": "/Dineout-WebCoding/static/js/2.ce714bc2.chunk.js.LICENSE.txt",
     "static/media/TopPick1.10e81fda.png": "/Dineout-WebCoding/static/media/TopPick1.10e81fda.png",
     "static/media/TopPick2.2e62377c.png": "/Dineout-WebCoding/static/media/TopPick2.2e62377c.png",
     "static/media/TopPick3.565c0765.png": "/Dineout-WebCoding/static/media/TopPick3.565c0765.png",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1e4f9f2b.js",
-    "static/js/2.e50cf0a1.chunk.js",
+    "static/js/2.ce714bc2.chunk.js",
     "static/css/main.c3687b39.chunk.css",
-    "static/js/main.6623fb8f.chunk.js"
+    "static/js/main.5b946f4f.chunk.js"
   ]
 }
