@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Dineout-WebCoding/static/css/main.c3687b39.chunk.css",
-    "main.js": "/Dineout-WebCoding/static/js/main.3ccc0ea5.chunk.js",
-    "main.js.map": "/Dineout-WebCoding/static/js/main.3ccc0ea5.chunk.js.map",
+    "main.js": "/Dineout-WebCoding/static/js/main.6623fb8f.chunk.js",
+    "main.js.map": "/Dineout-WebCoding/static/js/main.6623fb8f.chunk.js.map",
     "runtime-main.js": "/Dineout-WebCoding/static/js/runtime-main.1e4f9f2b.js",
     "runtime-main.js.map": "/Dineout-WebCoding/static/js/runtime-main.1e4f9f2b.js.map",
     "static/js/2.e50cf0a1.chunk.js": "/Dineout-WebCoding/static/js/2.e50cf0a1.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.1e4f9f2b.js",
     "static/js/2.e50cf0a1.chunk.js",
     "static/css/main.c3687b39.chunk.css",
-    "static/js/main.3ccc0ea5.chunk.js"
+    "static/js/main.6623fb8f.chunk.js"
   ]
 }
