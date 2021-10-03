@@ -5,13 +5,13 @@ import MenuGrid from '../Components/Menu/MenuGrid';
 
 
 export default function Home() {
-    return (
-      <React.Fragment>
-          <Container>
-            
-            <MenuGrid/>
+  return (
+    <React.Fragment>
+      <Container>
 
-                       </Container>
-      </React.Fragment>
-    );
-  }
+        <MenuGrid />
+
+      </Container>
+    </React.Fragment>
+  );
+}

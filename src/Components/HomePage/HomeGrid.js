@@ -7,12 +7,6 @@ import SuperSavers from './SuperSavers';
 import TopP from './TopPicks';
 import PopUp from './Dialog';
 import Promotionals from './Promotionals';
-import LoginButton from '../LoginPage/LoginButton';
-import SimpleCard from './card';
-import {Link, Router} from "react-router-dom";
-import { Button } from '@material-ui/core';
-import card1 from './card';
-import MediaCard from './card';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,36 +19,39 @@ export default function HomeGrid() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={5} 
-      container direction="row"
-      justifyContent="center"
-      alignItems="center">
+      <Grid container spacing={5}
+        direction="column"
+        alignItems="center"
+        justify="center"
+        style={{ minHeight: '100vh' }}>
 
-<PopUp />
+        <PopUp />
+
+
+        <Grid item xs={12} md={10}>
+        </Grid>
 
         {/* adding all components sequentially in grids */}
-        <Grid item xs={12}>
+        <Grid item xs={11}>
           <Promotionals />
         </Grid>
-      
-        <Grid item xs={10}>
+
+        <Grid item xs={11}>
           <BestOffers />
         </Grid>
 
-        <Grid item xs={10}>
+        <Grid item xs={11}>
           <RestaurantsNearYou />
         </Grid>
 
-        <Grid item xs={8}>
-          Top Picks
+        <Grid item xs={11}>
           <TopP />
         </Grid>
 
-        <Grid item xs={10}>
+        <Grid item xs={11}>
           <SuperSavers />
         </Grid>
 
-     
       </Grid>
     </div>
   );

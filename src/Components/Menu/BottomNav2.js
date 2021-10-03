@@ -21,6 +21,7 @@ export default function NavNext() {
 
   return (
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
+      
       <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
       <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
       <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />

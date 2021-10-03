@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@material-ui/core/Button';
 import CheckIcon from '@material-ui/icons/Check';
-import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -54,7 +53,6 @@ export default function Loading() {
   return (
     <div className={classes.root}>
       <div className={classes.wrapper}>
-      <Link to={process.env.PUBLIC_URL + '/login'}>
         <Button
           aria-label="save"
           color="primary"
@@ -64,7 +62,7 @@ export default function Loading() {
           {success ? <Button><CheckIcon /></Button> : <Button>detect</Button>}
         </Button>
         {loading && <CircularProgress size={40} className={classes.fabProgress} />}
-        </Link>
+      
       </div>
     </div>
   );

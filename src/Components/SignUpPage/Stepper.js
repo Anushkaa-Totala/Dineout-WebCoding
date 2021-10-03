@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import NameInput from '../LoginPage/NameInput';
 import NumberInput from '../LoginPage/NumberInput';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,11 +30,11 @@ function getSteps() {
 function getStepContent(stepIndex) {
   switch (stepIndex) {
     case 0:
-      return 'Select campaign settings...';
+      return 'Input Details';
     case 1:
-      return 'What is an ad group anyways?';
+      return 'OTP Verification';
     case 2:
-      return 'This is the bit I really care about!';
+      return 'Select Location';
     default:
       return 'Unknown stepIndex';
   }
@@ -65,32 +66,38 @@ export default function HorizontalLabelPositionBelowStepper() {
           </Step>
         ))}
       </Stepper>
+
       <div>
         {activeStep === steps.length ? (
           <div>
             <Typography className={classes.instructions}>All steps completed</Typography>
-            <Button onClick={handleReset}>Reset</Button>
-            location
+            
+            <Link to={process.env.PUBLIC_URL + '/home'}>
+              <Button onClick={handleReset}>Finish Sign Up</Button> </Link>
+             </div>
 
-          </div>
         ) : (
+
           <div>
             <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
             <div>
               <NameInput />
               <NumberInput />
+              
               <Button
                 disabled={activeStep === 0}
                 onClick={handleBack}
                 className={classes.backButton}>
                 Back
               </Button>
+
               <Button variant="contained" color="primary" onClick={handleNext}>
                 {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
               </Button>
             </div>
           </div>
         )}
+
       </div>
     </div>
   );

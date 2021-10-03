@@ -5,13 +5,16 @@ import IconButton from '@material-ui/core/IconButton';
 import LocationOn from '@material-ui/icons/LocationOn';
 import InputBase from '@material-ui/core/InputBase';
 import { alpha, makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import {Link, Router} from "react-router-dom";
+import {Link} from "react-router-dom";
+import { purple } from '@material-ui/core/colors';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    color: purple,
+    backgroundColor: purple,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -21,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
+      backgroundColor: purple,
     },
   },
   search: {
@@ -35,9 +39,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(1),
       width: 'auto',
+      color: 'white',
     },
   },
   searchIcon: {
+    color: 'white',
     padding: theme.spacing(0, 2),
     height: '100%',
     position: 'absolute',
@@ -45,6 +51,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  acc:{
+      color: 'white',
   },
   inputRoot: {
     color: 'inherit',
@@ -69,17 +78,12 @@ export default function SearchAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar position="sticky" className={classes.root}>
+        <Toolbar className={classes.root}>
           
-        <Link to={process.env.PUBLIC_URL + '/menu'}>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <LocationOn />
+        <Link to={process.env.PUBLIC_URL + '/home'}>
+          <IconButton>
+            <LocationOn className={classes.searchIcon}/>
           </IconButton>
           </Link>
 
@@ -100,11 +104,10 @@ export default function SearchAppBar() {
           <Link to={process.env.PUBLIC_URL + '/menu'}>
           <IconButton
             edge="start"
-            className={classes.menuButton}
+            className={classes.acc}
             color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
+            aria-label="open drawer" >
+            < AccountCircleIcon />
           </IconButton>
           </Link>
 

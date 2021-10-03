@@ -5,18 +5,19 @@ import ImageListItem from '@material-ui/core/ImageListItem';
 import image from '../../Assets/TopPick1.png'
 import image2 from '../../Assets/TopPick2.png'
 import image3 from '../../Assets/TopPick3.png'
+import { Typography, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-
+  },
+  header: {
+    fontFamily: 'Lato',
+    paddingLeft: theme.spacing(2),
+    fontSize: 22,
+    textAlign: 'left',
   },
   imageList: {
     flexWrap: 'nowrap',
-    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: 'translateZ(0)',
   },
 }));
@@ -39,14 +40,27 @@ export default function TopP() {
 
   return (
     <div className={classes.root}>
-      <ImageList className={classes.imageList} cols={2.5}>
-        {itemData.map((item) => (
-          //add images to the list
-          <ImageListItem key={item.img}>
-            <img src={item.img} />
-          </ImageListItem>
-        ))}
-      </ImageList>
+
+      <Grid container spacing={1}
+        direction="row"
+        alignContent="center"
+        alignItems="center">
+
+        <Grid item xs={8}>
+          <Typography className={classes.header}> Top Picks </Typography>
+          {/* header of the caraousel */}</Grid>
+
+        <Grid item xs={12} md={10}>
+          <ImageList className={classes.imageList} cols={1.5}>
+            {itemData.map((item) => (
+              //add images to the list
+              <ImageListItem key={item.img}>
+                <img src={item.img} />
+              </ImageListItem>))} </ImageList>
+        </Grid>
+
+      </Grid>
+
     </div>
   );
 }

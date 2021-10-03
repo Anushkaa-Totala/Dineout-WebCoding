@@ -28,19 +28,18 @@ const tutorialSteps = [      //adding all the image links
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 350, //setting the width of the box
+    maxWidth: 400, //setting the width of the box
     flexGrow: 1,
   },
   header: {
-    display: 'flex',
-    alignItems: 'center',
-    height: 50,
-    paddingLeft: theme.spacing(4),
-    backgroundColor: theme.palette.background.default,
+    fontFamily: 'Lato',
+    paddingLeft: theme.spacing(2),
+    fontSize: 22,
+    textAlign: 'left',
   },
   img: {
     height: 255,
-    maxWidth: 400,
+    minWidth: 340,
     overflow: 'hidden',
     display: 'block',
     width: '100%',
@@ -82,14 +81,12 @@ export default function SuperSavers() {
         className={classes.root}
         nextButton={
           <Button size="small" onClick={handleNext} disabled={activeStep === 3}>
-            Next
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            Back
           </Button>
         }
       />
