@@ -24,7 +24,7 @@ const tutorialSteps = [    //adding all the image links
     name: 'Hurrycane',
     cuisine1: 'JUICE',
     cuisine2: 'FAST FOODS',
-    // cuisine3: 'cuisine1',
+    cuisine3: 'SNACKS',
     address: 'Andheri Lokhandwala, Mumbai',
   },
   {
@@ -52,11 +52,17 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 350, //setting the width of the box
     flexGrow: 1,
+    // backgroundColor: 'red',
   },
   button: {
     fontFamily: 'Lato',
     color: 'white',
-    backgroundColor: 'purple',
+      background: '#5C284F',
+      border: 0,
+      borderRadius: 25,
+      color: 'white',
+      padding: '2px 5px',
+    
     fontSize: 10,
   },
   header: {
@@ -78,9 +84,17 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     fontSize: 14,
   },
-  paper: {
+  stepper:{
+    border: 0,
+    borderRadius: 22,
+  },
+  paper:{
+    border: 0,
+    borderRadius: 22,
   },
   img: {
+    border: 0,
+    borderRadius: 22,
     height: 255,
     maxWidth: 400,
     overflow: 'hidden',
@@ -101,8 +115,7 @@ export default function RestaurantsNearYou() {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
-
-
+ 
   return (
     <div className={classes.root}>
 
@@ -124,7 +137,7 @@ export default function RestaurantsNearYou() {
             {/* images */}
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid item xs={4.5}>
             <Typography className={classes.name}>
               {tutorialSteps[activeStep].name}
               {/* name of each restaurant */}
@@ -149,10 +162,6 @@ export default function RestaurantsNearYou() {
             {/* cuisine 3 */}
           </Grid>
 
-          <Grid item xs={1}>
-            <Typography className={classes.button}> + </Typography>
-            {/* more */}
-          </Grid>
 
           <Grid item xs={12}>
             <Typography className={classes.body}>
@@ -167,7 +176,7 @@ export default function RestaurantsNearYou() {
               steps={4} // setting number of slides
               position="static"
               activeStep={activeStep}
-              className={classes.root}
+              className={classes.stepper}
               nextButton={
                 <Button size="small" onClick={handleNext} disabled={activeStep === 3}>
                   {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}

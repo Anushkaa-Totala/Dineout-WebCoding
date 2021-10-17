@@ -1,13 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import NameInput from './NameInput';
-import NumberInput from './NumberInput';
 import BasicButtonGroup from './ButtonGroup';
-import LoginButton from './LoginButton';
 import { Link } from 'react-router-dom';
 import { IconButton, Typography } from '@material-ui/core';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import LoginForm from './LoginForm';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,6 +26,7 @@ export default function LoginGrid() {
             <Grid container spacing={3}>
                 {/* adding all components sequentially in grids */}
 
+
                 <Grid item xs={2}>
                     <Link to={process.env.PUBLIC_URL + '/home'}>
                         <IconButton> <ArrowBackIosIcon /> </IconButton> </Link>
@@ -40,11 +39,9 @@ export default function LoginGrid() {
                 </Grid>
 
                 <Grid item xs={12}>
-                    <NameInput />
+                   <LoginForm/>
                 </Grid>
-                <Grid item xs={12}>
-                    <NumberInput />
-                </Grid>
+
                 <Grid item xs={12}>
                     <p>
                         OR Sign in with
@@ -54,13 +51,6 @@ export default function LoginGrid() {
                 <Grid item xs={12}>
                     <BasicButtonGroup />
                 </Grid>
-
-
-                <Grid item xs={12}>
-                    <Link to={process.env.PUBLIC_URL + '/home'}>
-                        <LoginButton /> </Link>
-                </Grid>
-
 
             </Grid>
         </div>

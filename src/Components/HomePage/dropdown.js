@@ -9,10 +9,22 @@ const useStyles = makeStyles((theme) => ({
   button: {
     display: 'block',
     marginTop: theme.spacing(2),
+    fontFamily: 'Lato',
+    color: '#5C284F',
+    backgroundColor: '#5C284F'
   },
   formControl: {
     margin: theme.spacing(3),
     minWidth: 200,
+    fontFamily: 'Lato',
+    color: '#5C284F',
+    borderColor: '#5C284F',
+  },
+  option: {
+    fontFamily: 'Lato',
+    color: '#5C284F',
+    border: '',    
+    borderColor: '#5C284F',
   },
 }));
 
@@ -35,8 +47,8 @@ export default function ControlledOpenSelect() {
 
   return (
     <div>
-      <FormControl className= {classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">Select City</InputLabel>
+      <FormControl className={classes.formControl}>
+        <InputLabel className={classes.option} id="demo-controlled-open-select-label">Select City</InputLabel>
         <Select
           labelId="demo-controlled-open-select-label"
           id="demo-controlled-open-select"
@@ -45,21 +57,17 @@ export default function ControlledOpenSelect() {
           onOpen={handleOpen}
           value={age}
           onChange={handleChange}
+          className={classes.option}
         >
 
-          <MenuItem value={10}>Delhi</MenuItem>
-          <MenuItem value={20}>Pune</MenuItem>
-          <MenuItem value={30}>Ahemdabad</MenuItem>
-          <MenuItem value={40}>Kolkatta</MenuItem>
-          <MenuItem value={50}>Chennai</MenuItem>
+          <MenuItem value={10} className={classes.option}>Delhi</MenuItem>
+          <MenuItem value={20} className={classes.option}>Pune</MenuItem>
+          <MenuItem value={30} className={classes.option}>Ahemdabad</MenuItem>
+          <MenuItem value={40} className={classes.option}>Kolkatta</MenuItem>
+          <MenuItem value={50} className={classes.option}>Chennai</MenuItem>
 
         </Select>
-</FormControl>
-
-
-      {/* <Button className={classes.button} onClick={handleOpen}>
-        Select Location
-      </Button> */}
+      </FormControl>
 
     </div>
   );

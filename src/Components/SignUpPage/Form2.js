@@ -8,6 +8,16 @@ import Typography from '@material-ui/core/Typography';
 import NameInput from '../LoginPage/NameInput';
 import NumberInput from '../LoginPage/NumberInput';
 import { Link } from 'react-router-dom';
+import PasswordInput from '../LoginPage/PasswordInput';
+import ControlledOpenSelect from '../HomePage/dropdown';
+import RePassInput from './RePasswordInput';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const muiTheme = createMuiTheme({
+    stepper: {
+        iconColor: 'green' // or logic to change color
+    }
+})
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,17 +40,17 @@ function getSteps() {
 function getStepContent(stepIndex) {
   switch (stepIndex) {
     case 0:
-      return 'Input Details';
+      return 'Input Details 1';
     case 1:
-      return 'OTP Verification';
+      return 'OTP Verification 2 ';
     case 2:
-      return 'Select Location';
+      return 'Select Location 3';
     default:
-      return 'Unknown stepIndex';
+      return 'Unknown stepIndex 4';
   }
 }
 
-export default function HorizontalLabelPositionBelowStepper() {
+export default function StepForm() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
@@ -59,31 +69,45 @@ export default function HorizontalLabelPositionBelowStepper() {
 
   return (
     <div className={classes.root}>
+      <MuiThemeProvider muiTheme={muiTheme}>
       <Stepper activeStep={activeStep} alternativeLabel>
         {steps.map((label) => (
           <Step key={label}>
             <StepLabel>{label}</StepLabel>
           </Step>
         ))}
-      </Stepper>
+      </Stepper> </MuiThemeProvider>
+
+      {/* <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography> */}
 
       <div>
         {activeStep === steps.length ? (
-          <div>
-            <Typography className={classes.instructions}>All steps completed</Typography>
-            
+          <><Typography>
+            Account Successfully created!
+            </Typography>
+
             <Link to={process.env.PUBLIC_URL + '/home'}>
-              <Button onClick={handleReset}>Finish Sign Up</Button> </Link>
-             </div>
+            <Button  variant="contained" color="secondary" type="submit">SUBMIT </Button> </Link>
+          </>
 
         ) : (
 
-          <div>
-            <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+          <><div>
+
+            {activeStep === steps.length - 3 ? <NameInput/> : ''}
+            {/* to get name input on step 1 */}
+            {activeStep === steps.length - 3 ? <NumberInput/> : ''}
+            {/* to get number input on step 1 */}
+
+            {activeStep === steps.length - 2 ? <PasswordInput /> : ''}
+            {/* to get password input on step 2 */}
+            {activeStep === steps.length - 2 ? <RePassInput /> : ''}
+            {/* to get password input on step 2 */}
+
+            {activeStep === steps.length - 1 ? <ControlledOpenSelect/> : ''}
+            {/* to get select city on step 3 */}
+
             <div>
-              <NameInput />
-              <NumberInput />
-              
               <Button
                 disabled={activeStep === 0}
                 onClick={handleBack}
@@ -95,8 +119,8 @@ export default function HorizontalLabelPositionBelowStepper() {
                 {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
               </Button>
             </div>
-          </div>
-        )}
+
+          </div></>  )}
 
       </div>
     </div>

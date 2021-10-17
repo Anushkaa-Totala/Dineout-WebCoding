@@ -10,16 +10,29 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     alignItems: 'center',
+    fontFamily: 'Lato',
+    color: '#5C284F',
   },
   wrapper: {
     margin: theme.spacing(1),
     position: 'relative',
+    fontFamily: 'Lato',
+    color: '#5C284F',
   },
   fabProgress: {
     position: 'fixed',
     top: "center",
     left:  "center",
     zIndex: 1,
+    fontFamily: 'Lato',
+    color: '#5C284F',
+  },
+  button: {
+    fontFamily: 'Lato',
+    color: '#F2635C',
+    borderRadius: 16,
+borderColor: '#F2635C',
+maxHeight: '80',
   },
 }));
 
@@ -29,7 +42,7 @@ export default function Loading() {
   const [success, setSuccess] = React.useState(false);
   const timer = React.useRef();
 
-  const buttonClassname = clsx({
+  const button = clsx({
     [classes.buttonSuccess]: success,
   });
 
@@ -55,11 +68,9 @@ export default function Loading() {
       <div className={classes.wrapper}>
         <Button
           aria-label="save"
-          color="primary"
-          className={buttonClassname}
-          onClick={handleButtonClick}
-        >
-          {success ? <Button><CheckIcon /></Button> : <Button>detect</Button>}
+          className={classes.button}
+          onClick={handleButtonClick} variant='outlined'>
+          {success ? <Button className={classes.button}><CheckIcon /></Button> : <Button className={classes.button}>detect</Button>}
         </Button>
         {loading && <CircularProgress size={40} className={classes.fabProgress} />}
       

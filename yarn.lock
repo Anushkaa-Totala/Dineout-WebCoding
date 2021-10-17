@@ -8166,6 +8166,11 @@
   dependencies:
     "object-visit" "^1.0.0"
 
+"materialize-stepper@^3.1.0":
+  "integrity" "sha512-AtN2zzTEpsDTAVIU5eF0lC1ixaeCPZUyKmcx0jDwFqCGloY63uKR3t3HPvDRGZbt35bg6S22bUpHFv1hFDcjow=="
+  "resolved" "https://registry.npmjs.org/materialize-stepper/-/materialize-stepper-3.1.0.tgz"
+  "version" "3.1.0"
+
 "md5.js@^1.3.4":
   "integrity" "sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg=="
   "resolved" "https://registry.npmjs.org/md5.js/-/md5.js-1.3.5.tgz"

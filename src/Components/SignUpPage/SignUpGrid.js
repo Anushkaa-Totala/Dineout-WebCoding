@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import HorizontalLabelPositionBelowStepper from './Stepper';
 import { IconButton, Typography } from '@material-ui/core';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import { Link } from 'react-router-dom';
+import StepForm from './Form2';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -46,7 +46,7 @@ export default function SignUpGrid() {
                 </Grid>
 
                 <Grid item xs={12}>
-                    <HorizontalLabelPositionBelowStepper />
+                    <StepForm/>
                 </Grid>
 
             </Grid>

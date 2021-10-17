@@ -28,7 +28,7 @@ const tutorialSteps = [      //adding all the image links
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 400, //setting the width of the box
+    maxWidth: 350, //setting the width of the box
     flexGrow: 1,
   },
   header: {
@@ -38,8 +38,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
   },
   img: {
+    border: 0,
+    borderRadius: 22,
     height: 255,
-    minWidth: 340,
+    minWidth: 300,
     overflow: 'hidden',
     display: 'block',
     width: '100%',

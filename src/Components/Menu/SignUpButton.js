@@ -8,6 +8,13 @@ const useStyles = makeStyles((theme) => ({
             margin: theme.spacing(1),
         },
     },
+    button: {
+        fontFamily: 'Lato',
+        backgroundColor: '#F2635C',
+        color: 'white',
+        borderRadius: 14,
+        borderColor: '#F2635C',
+    },
 }));
 
 export default function SignUpButton() {
@@ -15,7 +22,7 @@ export default function SignUpButton() {
 
     return (
         <div className={classes.root}>
-            <Button variant="contained" color="secondary" position='sticky'>
+            <Button className={classes.button} variant="contained" autofocus>
             SignUp
             </Button>
             {/* Simple Button for completing login step */}

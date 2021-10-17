@@ -18,6 +18,15 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
+    text: {
+        font: 'Lato',
+        fontSize: 22,
+    },
+    or: {
+        font: 'Lato',
+        fontSize: 14,
+        color: '#707070',
+    },
 }));
 
 export default function MenuGrid() {
@@ -25,45 +34,47 @@ export default function MenuGrid() {
 
     return (
         <div className={classes.root}>
-            <Grid container spacing={3} direction="row"
+            <Grid container spacing={1} direction="row"
                 alignItems="center"
                 justify="center">
                 {/* adding all components sequentially in grids */}
 
-                <Grid item xs={2}>
+                <Grid item xs={1}>
                     <Link to={process.env.PUBLIC_URL + '/home'}>
                         <IconButton> <ArrowBackIosIcon /> </IconButton> </Link>
                 </Grid>
 
-                <Grid item xs={8}>
-                    <p>
+                <Grid item xs={11}>
+                    {/* <Typography className={classes.text}>
                         MENU
-                    </p>
+                    </Typography> */}
                 </Grid>
 
                 <Link to={process.env.PUBLIC_URL + '/login'}>
-                    <Grid item xs={4}>
+                    <Grid item xs={6}>
                         <LoginButton />
                     </Grid>
                 </Link>
 
                 <Link to={process.env.PUBLIC_URL + '/signup'}>
-                    <Grid item xs={4}>
+                    <Grid item xs={6}>
                         <SignUpButton />
                     </Grid>
                 </Link>
 
                 <Grid item xs={12}>
-                    <p>
-                        OR Sign in with
-                    </p>
+                    <Typography className={classes.or}>
+                        OR
+                    </Typography>
                 </Grid>
 
                 <Grid item xs={12}>
                     <BasicButtonGroup />
                 </Grid>
 
-                <Grid item xs={12}>
+                <Grid item xs={12}></Grid>
+
+                <Grid item xs={10}>
                     <InsetDividers />
                 </Grid>
             </Grid>
