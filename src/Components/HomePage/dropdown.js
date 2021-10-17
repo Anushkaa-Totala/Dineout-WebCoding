@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   option: {
     fontFamily: 'Lato',
     color: '#5C284F',
-    border: '',    
+    border: '',
     borderColor: '#5C284F',
   },
 }));

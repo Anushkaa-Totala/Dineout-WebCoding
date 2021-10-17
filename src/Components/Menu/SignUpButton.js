@@ -10,10 +10,13 @@ const useStyles = makeStyles((theme) => ({
     },
     button: {
         fontFamily: 'Lato',
-        backgroundColor: '#F2635C',
+        background: 'linear-gradient(45deg, #FE6B8B 10%, #F2635C 90%)',
+        border: 0,
+        borderRadius: 15,
+        boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
         color: 'white',
-        borderRadius: 14,
-        borderColor: '#F2635C',
+        height: 45,
+        padding: '0 30px',
     },
 }));
 
@@ -23,7 +26,7 @@ export default function SignUpButton() {
     return (
         <div className={classes.root}>
             <Button className={classes.button} variant="contained" autofocus>
-            SignUp
+                SignUp
             </Button>
             {/* Simple Button for completing login step */}
         </div>

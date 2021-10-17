@@ -4,24 +4,24 @@ import TextField from '@material-ui/core/TextField';
 import { InputLabel } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-  root: { 
-      width: '25ch',
-      border: 4,
-      
-        '& .MuiOutlinedInput-root': {  // - The Input-root, inside the TextField-root
-            '& fieldset': {            // - The <fieldset> inside the Input-root
-                borderColor: '#5C284F',   // - Set the Input border
-            },
-            '&:hover fieldset': {
-                borderColor: '#5C284F', // - Set the Input border when parent has :hover
-            },
-            '&.Mui-focused fieldset': { // - Set the Input border when parent is focused 
-                borderColor: '#F2635C',
-            },
-        },
+  root: {
+    width: '25ch',
+    border: 4,
+
+    '& .MuiOutlinedInput-root': {  // - The Input-root, inside the TextField-root
+      '& fieldset': {            // - The <fieldset> inside the Input-root
+        borderColor: '#C4AC83',
+      },
+      '&:hover fieldset': {
+        borderColor: '#5C284F', // - Set the Input border when parent has :hover
+      },
+      '&.Mui-focused fieldset': { // - Set the Input border when parent is focused 
+        borderColor: '#5C284F',
+      },
+    },
   },
-  text:{
-fontFamily: 'Futura',
+  text: {
+    fontFamily: 'Futura',
   },
 }));
 
@@ -30,8 +30,8 @@ export default function PasswordInput() {
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-        {/* <TextField id="Password" label="Password" variant="outlined" type="password" class="validate invalid" required="" className={classes.text}  /> */}
-        <TextField id="Name" label="Password" variant="outlined" type="password"  classes={ classes } />
-</form>
+      {/* <TextField id="Password" label="Password" variant="outlined" type="password" class="validate invalid" required="" className={classes.text}  /> */}
+      <TextField id="Name" label="Password" variant="outlined" type="password" classes={classes} />
+    </form>
   );
 }

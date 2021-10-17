@@ -8,7 +8,7 @@ export default function Home() {
       <Container>
 
         <LoginGrid />
-        
+
       </Container>
 
     </React.Fragment>

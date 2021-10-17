@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     color: '#470B32',
   },
-  text:{
+  text: {
     fontFamily: 'Lato',
     fontSize: '20',
   },
@@ -39,38 +39,38 @@ export default function InsetDividers() {
 
         <Grid item xs={9}>
           <ListItem>
-          <Typography className={classes.text} > Customer Care</Typography>
+            <Typography className={classes.text} > Customer Care</Typography>
           </ListItem> </Grid>
 
-          <Grid item xs={12}>
+        <Grid item xs={12}>
           <Divider variant="inset" component="li" />
-       </Grid>
-          
-          <Grid item xs={3}>
+        </Grid>
+
+        <Grid item xs={3}>
           <ListItem>
-          <NoteIcon className={classes.icon} />
+            <NoteIcon className={classes.icon} />
           </ListItem> </Grid>
 
         <Grid item xs={9}>
-        <ListItem>
-          <Typography className={classes.text} > Terms Conditions</Typography>
-          </ListItem> 
-         </Grid>
-
-          <Grid item xs={12}>
-          <Divider variant="inset" component="li" />
-       </Grid>
-
-          <Grid item xs={3}>
           <ListItem>
-          < SettingsIcon className={classes.icon} />
+            <Typography className={classes.text} > Terms Conditions</Typography>
+          </ListItem>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Divider variant="inset" component="li" />
+        </Grid>
+
+        <Grid item xs={3}>
+          <ListItem>
+            < SettingsIcon className={classes.icon} />
           </ListItem> </Grid>
 
         <Grid item xs={9}>
-        <ListItem>
-          <Typography className={classes.text} > Settings</Typography>
-          </ListItem> 
-      </Grid>
+          <ListItem>
+            <Typography className={classes.text} > Settings</Typography>
+          </ListItem>
+        </Grid>
 
       </Grid>
 

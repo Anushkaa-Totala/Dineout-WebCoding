@@ -16,6 +16,23 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
+    or: {
+        font: 'Lato',
+        fontSize: 14,
+        color: '#707070',
+    },
+    header: {
+        fontFamily: 'Lato',
+        paddingLeft: theme.spacing(2),
+        paddingTop: theme.spacing(3),
+        fontSize: 22,
+        textAlign: 'left',
+    },
+    arrow: {
+        padding: theme.spacing(2),
+        paddingLeft: theme.spacing(1.5),
+        paddingTop: theme.spacing(2),
+    },
 }));
 
 export default function LoginGrid() {
@@ -29,23 +46,21 @@ export default function LoginGrid() {
 
                 <Grid item xs={2}>
                     <Link to={process.env.PUBLIC_URL + '/home'}>
-                        <IconButton> <ArrowBackIosIcon /> </IconButton> </Link>
+                        <IconButton> <ArrowBackIosIcon className={classes.arrow} /> </IconButton> </Link>
                 </Grid>
 
                 <Grid item xs={10}>
-                    <p>
-                        LOGIN
-                    </p>
+                    <Typography className={classes.header}> Login</Typography>
                 </Grid>
 
                 <Grid item xs={12}>
-                   <LoginForm/>
+                    <LoginForm />
                 </Grid>
 
                 <Grid item xs={12}>
-                    <p>
-                        OR Sign in with
-                    </p>
+                    <Typography className={classes.or}>
+                        OR Sign In With
+                    </Typography>
                 </Grid>
 
                 <Grid item xs={12}>

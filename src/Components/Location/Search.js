@@ -2,12 +2,11 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import LocationOn from '@material-ui/icons/LocationOn';
 import InputBase from '@material-ui/core/InputBase';
 import { alpha, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import { Link } from "react-router-dom";
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,16 +43,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  locationIcon: {
-    color: 'white',
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
     background: '#FFFFFF',
@@ -70,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SearchAppBar() {
+export default function SearchBar() {
   const classes = useStyles();
 
   return (
@@ -78,29 +67,20 @@ export default function SearchAppBar() {
       <AppBar position="sticky" className={classes.root}>
         <Toolbar className={classes.root}>
 
-          <Link to={process.env.PUBLIC_URL + '/location'}>
+          <Link to={process.env.PUBLIC_URL + '/home'}>
             <IconButton>
-              <LocationOn className={classes.locationIcon} />
+              <ArrowBackIosIcon />
             </IconButton>
           </Link>
 
           <div className={classes.search}>
 
             <InputBase
-              placeholder="Search in City"
+              placeholder="Search City"
               classes={{ input: classes.inputInput, }}></InputBase>
             <IconButton> <SearchIcon className={classes.searchIcon} /></IconButton>
 
           </div>
-
-          <Link to={process.env.PUBLIC_URL + '/menu'}>
-            <IconButton
-              edge="start"
-              className={classes.AccButton} >
-              < AccountCircleIcon />
-            </IconButton>
-          </Link>
-
         </Toolbar>
       </AppBar>
     </div>

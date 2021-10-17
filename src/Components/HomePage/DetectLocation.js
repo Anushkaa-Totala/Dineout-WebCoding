@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   fabProgress: {
     position: 'fixed',
     top: "center",
-    left:  "center",
+    left: "center",
     zIndex: 1,
     fontFamily: 'Lato',
     color: '#5C284F',
@@ -31,8 +31,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Lato',
     color: '#F2635C',
     borderRadius: 16,
-borderColor: '#F2635C',
-maxHeight: '80',
+    borderColor: '#F2635C',
+    // minHeight: '180',
+    maxHeight: '180',
   },
 }));
 
@@ -73,7 +74,7 @@ export default function Loading() {
           {success ? <Button className={classes.button}><CheckIcon /></Button> : <Button className={classes.button}>detect</Button>}
         </Button>
         {loading && <CircularProgress size={40} className={classes.fabProgress} />}
-      
+
       </div>
     </div>
   );

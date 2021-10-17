@@ -18,10 +18,15 @@ const useStyles = makeStyles((theme) => ({
     },
     header: {
         fontFamily: 'Lato',
-        paddingLeft: theme.spacing(2),
+        paddingLeft: theme.spacing(1),
         fontSize: 22,
         textAlign: 'left',
-      },
+    },
+    arrow: {
+        padding: theme.spacing(2),
+        paddingLeft: theme.spacing(1.5),
+        paddingTop: theme.spacing(2),
+    },
 }));
 
 export default function SignUpGrid() {
@@ -29,16 +34,16 @@ export default function SignUpGrid() {
 
     return (
         <div className={classes.root}>
-            <Grid container spacing={2}    direction="row"
-        alignItems="center"
-        justify="center">
+            <Grid container spacing={2} direction="row"
+                alignItems="center"
+                justify="center">
                 {/* adding all components sequentially in grids */}
 
                 <Grid item xs={12}></Grid>
 
                 <Grid item xs={2}>
-                <Link to={process.env.PUBLIC_URL + '/home'}>
-                    <IconButton> <ArrowBackIosIcon/> </IconButton> </Link>
+                    <Link to={process.env.PUBLIC_URL + '/home'}>
+                        <IconButton className={classes.arrow}> <ArrowBackIosIcon /> </IconButton> </Link>
                 </Grid>
 
                 <Grid item xs={9}>
@@ -46,7 +51,7 @@ export default function SignUpGrid() {
                 </Grid>
 
                 <Grid item xs={12}>
-                    <StepForm/>
+                    <StepForm />
                 </Grid>
 
             </Grid>

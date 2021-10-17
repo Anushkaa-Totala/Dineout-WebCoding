@@ -57,12 +57,12 @@ const useStyles = makeStyles((theme) => ({
   button: {
     fontFamily: 'Lato',
     color: 'white',
-      background: '#5C284F',
-      border: 0,
-      borderRadius: 25,
-      color: 'white',
-      padding: '2px 5px',
-    
+    background: '#5C284F',
+    border: 0,
+    borderRadius: 25,
+    color: 'white',
+    padding: '2px 5px',
+
     fontSize: 10,
   },
   header: {
@@ -84,11 +84,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     fontSize: 14,
   },
-  stepper:{
+  stepper: {
     border: 0,
     borderRadius: 22,
   },
-  paper:{
+  paper: {
     border: 0,
     borderRadius: 22,
   },
@@ -115,7 +115,7 @@ export default function RestaurantsNearYou() {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
- 
+
   return (
     <div className={classes.root}>
 

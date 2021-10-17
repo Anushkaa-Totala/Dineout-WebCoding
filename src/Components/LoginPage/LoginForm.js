@@ -4,20 +4,21 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import NameInput from './NameInput';
 import NumberInput from './NumberInput';
-import { Link } from 'react-router-dom';
 import PasswordInput from './PasswordInput';
+import { Grid } from '@material-ui/core';
+import LoginButton from './LoginButton';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
   },
-  login:{
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+  login: {
+    background: 'linear-gradient(45deg, #FE6B8B 10%, #F2635C 90%)',
     border: 0,
-    borderRadius: 25,
+    borderRadius: 15,
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     color: 'white',
-    height: 48,
+    height: 45,
     padding: '0 30px',
   },
   backButton: {
@@ -34,16 +35,6 @@ function getSteps() {
   //naming the steps 
 }
 
-function getStepContent(stepIndex) {
-  switch (stepIndex) {
-    case 0:
-      return 'Input Details 1';
-    case 1:
-      return 'OTP Verification 2 ';
-    default:
-      return 'Unknown stepIndex 4';
-  }
-}
 
 export default function StepForm() {
   const classes = useStyles();
@@ -61,25 +52,41 @@ export default function StepForm() {
   return (
     <><div>
 
-      {activeStep === steps.length - 2 ? <NameInput /> : ''}
-      {/* to get name input on step 1 */}
-      {activeStep === steps.length - 2 ? <NumberInput /> : ''}
-      {/* to get number input on step 1 */}
+      <Grid container spacing={2} direction="column"
+        alignItems="center"
+        justify="center">
+        {/* adding all components sequentially in grids */}
 
+        <Grid item xs={12}>
+          {activeStep === steps.length - 2 ? <NameInput /> : ''}
+          {/* to get name input on step 1 */} </Grid>
 
-      {activeStep === steps.length - 1 ? <PasswordInput /> : ''}
-      {/* to get password input on step 2 */}
+        <Grid item xs={12}>
+          {activeStep === steps.length - 2 ? <NumberInput /> : ''}
+          {/* to get number input on step 1 */}</Grid>
 
+        <Grid item xs={12}>
+          {activeStep === steps.length - 1 ? <PasswordInput /> : ''}
+          {/* to get password input on step 2 */}  </Grid>
+      </Grid>
 
       <div>
-        <Button disabled={activeStep === 0} onClick={handleBack} className={classes.backButton}> Back </Button>
 
-        {activeStep === steps.length - 2 ? <Button onClick={handleNext}>next</Button> : ''}
-        {/* to get next button on step 1 */}
+        <Grid container spacing={2} direction="row"
+          alignItems="center"
+          justify="center">
+          {/* adding all components sequentially in grids */}
 
-        {activeStep === steps.length - 1 ? <Link to={process.env.PUBLIC_URL + '/home'}><Button className={classes.login }>LOGIN</Button></Link> : ''}
-        {/* to get LOGIN button on step 2 */}
+          <Grid item xs={12}></Grid>
 
+          <Grid item xs={4}>
+            <Button disabled={activeStep === 0} onClick={handleBack} className={classes.backButton}> Back </Button> </Grid>
+
+          <Grid item xs={4}>
+            {activeStep === steps.length - 2 ? <Button onClick={handleNext} className={classes.login}>next</Button> : <LoginButton />}
+            {/* to get next button on step 1 */} </Grid>
+
+        </Grid>
       </div>
 
     </div></>)

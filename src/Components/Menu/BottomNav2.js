@@ -8,7 +8,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 const useStyles = makeStyles({
-  
+
 });
 
 export default function NavNext() {
@@ -21,7 +21,7 @@ export default function NavNext() {
 
   return (
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-      
+
       <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
       <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
       <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />

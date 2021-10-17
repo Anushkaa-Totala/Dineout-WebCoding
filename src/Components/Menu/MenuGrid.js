@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
     text: {
         font: 'Lato',
         fontSize: 22,
+        textAlign: 'left',
+        padding: theme.spacing(2),
     },
     or: {
         font: 'Lato',
@@ -45,10 +47,12 @@ export default function MenuGrid() {
                 </Grid>
 
                 <Grid item xs={11}>
-                    {/* <Typography className={classes.text}>
-                        MENU
-                    </Typography> */}
+                    <Typography className={classes.text}>
+                        Profile
+                    </Typography>
                 </Grid>
+
+                <Grid item xs={12}> </Grid>
 
                 <Link to={process.env.PUBLIC_URL + '/login'}>
                     <Grid item xs={6}>

@@ -20,15 +20,17 @@ const useStyles = makeStyles((theme) => ({
         color: '#F2635C',
         borderRadius: 16,
         borderColor: '#F2635C',
-        maxHeight: '180',
+        minHeight: '380',
     },
     type: {
         fontFamily: 'Lato',
         backgroundColor: '#F2635C',
         color: 'white',
         fontSize: 22,
+        paddingLeft: theme.spacing(2),
+        paddingTop: theme.spacing(2),
     },
-    box:{
+    box: {
         maxWidth: 'auto',
         maxBlockSize: '80',
     },
@@ -65,18 +67,12 @@ export default function PopUp() {
 
                     <Grid item xs={12}>
                         <Box className={classes.box}>
-                            <Typography className={classes.type}>Find Location  <IconButton onClick={handleClose} className={classes.type} autoFocus> 
-                            <CloseIcon />  </IconButton>
+                            <Typography className={classes.type}>Find Location  <IconButton onClick={handleClose} className={classes.type} autoFocus>
+                                <CloseIcon />  </IconButton>
                             </Typography>
                             {/* titlle on dialogue box */}
-                           
+
                         </Box>
-                    </Grid>
-
-                    <Grid item xs={3}>
-                        <Link to={process.env.PUBLIC_URL + '/home'}>
-
-                        </Link>
                     </Grid>
 
                     {/* content on dialogue box */}
@@ -98,7 +94,6 @@ export default function PopUp() {
                             </Button>
                         </Link>
                     </Grid>
-
 
                 </Grid>
             </Dialog>

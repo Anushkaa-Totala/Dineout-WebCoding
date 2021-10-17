@@ -14,15 +14,15 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-    imgPath:Promos1,
+    imgPath: Promos1,
   },
   {
-    imgPath:Promos2,
+    imgPath: Promos2,
   },
   {
-    imgPath:Promos3,
+    imgPath: Promos3,
   },
-  
+
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -60,7 +60,7 @@ function Promotionals() {
 
   return (
     <div className={classes.root}>
-      
+
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}

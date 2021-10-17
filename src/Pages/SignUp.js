@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <React.Fragment>
       <Container>
-       <SignUpGrid/>
+        <SignUpGrid />
       </Container>
     </React.Fragment>
   );

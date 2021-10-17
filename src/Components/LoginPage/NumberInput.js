@@ -7,6 +7,19 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
       width: '25ch',
+
+      '& .MuiOutlinedInput-root': {  // - The Input-root, inside the TextField-root
+        '& fieldset': {            // - The <fieldset> inside the Input-root
+          borderColor: '#C4AC83',
+        },
+        '&:hover fieldset': {
+          borderColor: '#5C284F', // - Set the Input border when parent has :hover
+        },
+        '&.Mui-focused fieldset': { // - Set the Input border when parent is focused 
+          borderColor: '#5C284F',
+        },
+      },
+
     },
   },
 }));

@@ -11,13 +11,8 @@ import { Link } from 'react-router-dom';
 import PasswordInput from '../LoginPage/PasswordInput';
 import ControlledOpenSelect from '../HomePage/dropdown';
 import RePassInput from './RePasswordInput';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
 
-const muiTheme = createMuiTheme({
-    stepper: {
-        iconColor: 'green' // or logic to change color
-    }
-})
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,15 +20,36 @@ const useStyles = makeStyles((theme) => ({
   },
   backButton: {
     marginRight: theme.spacing(1),
+    fontFamily: 'Lato',
+    border: 0,
+    borderRadius: 15,
+    height: 45,
+    padding: '0 30px',
   },
   instructions: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
   },
+  button: {
+    fontFamily: 'Lato',
+    background: 'linear-gradient(45deg, #FE6B8B 10%, #F2635C 90%)',
+    border: 0,
+    borderRadius: 15,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 45,
+    padding: '0 30px',
+  },
+  text: {
+    fontFamily: 'Lato',
+    textAlign: 'center',
+    width: 350,
+    fontSize: 18,
+  },
 }));
 
 function getSteps() {
-  return ['Input Details', 'OTP Verification', 'Select Location'];
+  return ['Input Details', 'Add Password', 'Select Location'];
   //naming the steps 
 }
 
@@ -69,43 +85,62 @@ export default function StepForm() {
 
   return (
     <div className={classes.root}>
-      <MuiThemeProvider muiTheme={muiTheme}>
+
       <Stepper activeStep={activeStep} alternativeLabel>
         {steps.map((label) => (
           <Step key={label}>
             <StepLabel>{label}</StepLabel>
           </Step>
         ))}
-      </Stepper> </MuiThemeProvider>
+      </Stepper>
 
       {/* <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography> */}
 
       <div>
         {activeStep === steps.length ? (
-          <><Typography>
-            Account Successfully created!
-            </Typography>
+          <><Grid container spacing={2} direction="column"
+            alignItems="center"
+            justify="center">
 
-            <Link to={process.env.PUBLIC_URL + '/home'}>
-            <Button  variant="contained" color="secondary" type="submit">SUBMIT </Button> </Link>
+            <Grid item xs={12}><Typography className={classes.text}>
+              Account Successfully created!
+            </Typography></Grid>
+
+            <Grid item xs={12}> <Link to={process.env.PUBLIC_URL + '/home'}>
+              <Button variant="contained" color="secondary" className={classes.button}>SUBMIT </Button> </Link> </Grid>
+          </Grid>
           </>
 
         ) : (
 
           <><div>
 
-            {activeStep === steps.length - 3 ? <NameInput/> : ''}
-            {/* to get name input on step 1 */}
-            {activeStep === steps.length - 3 ? <NumberInput/> : ''}
-            {/* to get number input on step 1 */}
+            <Grid container spacing={2} direction="column"
+              alignItems="center"
+              justify="center">
+              {/* adding all components sequentially in grids */}
 
-            {activeStep === steps.length - 2 ? <PasswordInput /> : ''}
-            {/* to get password input on step 2 */}
-            {activeStep === steps.length - 2 ? <RePassInput /> : ''}
-            {/* to get password input on step 2 */}
+              <Grid item xs={12}>
+                {activeStep === steps.length - 3 ? <NameInput /> : ''}
+                {/* to get name input on step 1 */}</Grid>
 
-            {activeStep === steps.length - 1 ? <ControlledOpenSelect/> : ''}
-            {/* to get select city on step 3 */}
+              <Grid item xs={12}>
+                {activeStep === steps.length - 3 ? <NumberInput /> : ''}
+                {/* to get number input on step 1 */}</Grid>
+
+              <Grid item xs={12}>
+                {activeStep === steps.length - 2 ? <PasswordInput /> : ''}
+                {/* to get password input on step 2 */}</Grid>
+
+              <Grid item xs={12}>
+                {activeStep === steps.length - 2 ? <RePassInput /> : ''}
+                {/* to get password input on step 2 */}</Grid>
+
+              <Grid item xs={12}>
+                {activeStep === steps.length - 1 ? <ControlledOpenSelect /> : ''}
+                {/* to get select city on step 3 */}</Grid>
+
+            </Grid>
 
             <div>
               <Button
@@ -115,12 +150,12 @@ export default function StepForm() {
                 Back
               </Button>
 
-              <Button variant="contained" color="primary" onClick={handleNext}>
+              <Button variant="contained" color="primary" onClick={handleNext} className={classes.button}>
                 {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
               </Button>
             </div>
 
-          </div></>  )}
+          </div></>)}
 
       </div>
     </div>
