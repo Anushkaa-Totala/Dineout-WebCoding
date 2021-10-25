@@ -100,7 +100,7 @@ export default function DesktopSearch() {
             <Grid xl={1} lg={1}>
               <LoginBox /></Grid>
 
-            <Grid xl={1} lg={1}>
+            <Grid xl={1.5} lg={1.5}>
               <SignUpBox /></Grid>
 
           </Grid>

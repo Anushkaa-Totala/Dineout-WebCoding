@@ -13,10 +13,20 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import image from '../../../Assets/poptates.png'
 import { Grid } from '@material-ui/core';
 import { Divider } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+  },
+  button2: {
+    fontFamily: 'Lato',
+    color: 'white',
+    border: 0,
+    borderRadius: 15,
+    backgroundColor: '#F1645B',
+    height: 'auto',
+    width: 250
   },
   media: {
     height: 0,
@@ -97,17 +107,17 @@ export default function Bistro() {
         </Grid>
 
         <Grid item lg={2.5}>
-          <Typography className={classes.button}>INDIAN</Typography>
+          <Typography className={classes.button}>Indian</Typography>
           {/* cuisine 1 */}
         </Grid>
 
         <Grid item lg={2.5}>
-          <Typography className={classes.button}>MEXICAN</Typography>
+          <Typography className={classes.button}>Thai</Typography>
           {/* cuisine 2 */}
         </Grid>
 
         <Grid item lg={2.5}>
-          <Typography className={classes.button}>CHINESE</Typography>
+          <Typography className={classes.button}>Korean</Typography>
           {/* cuisine 3 */}
         </Grid>
 
@@ -135,7 +145,7 @@ export default function Bistro() {
             <Grid item lg={12}><Typography className={classes.body2}>
               Offer: Combine any offer with Dineout Pay to save up to 10% more on your bill and also get 20% cashback.
             </Typography></Grid>
-
+            <Button className={classes.button2}>Reserve Table</Button>
           </CardContent>
         </Collapse>
 

@@ -10,7 +10,7 @@ import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import image from '../../../Assets/poptates.png'
+import { Button } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
 import { Divider } from '@material-ui/core';
 
@@ -38,6 +38,15 @@ const useStyles = makeStyles((theme) => ({
   },
   expandOpen: {
     transform: 'rotate(180deg)',
+  },
+  button2: {
+    fontFamily: 'Lato',
+    color: 'white',
+    border: 0,
+    borderRadius: 15,
+    backgroundColor: '#F1645B',
+    height: 'auto',
+    width: 250
   },
   button: {
     fontFamily: 'Lato',
@@ -112,7 +121,7 @@ export default function Shizuan() {
         </Grid>
 
         <Grid item lg={9}>
-          <Typography className={classes.body}>101, high street phoenix, Lower Parel. </Typography>
+          <Typography className={classes.body}>Powai Lake, Powai.</Typography>
           {/* address of the restaurant */}</Grid>
 
         <Grid item lg={3}>
@@ -135,7 +144,7 @@ export default function Shizuan() {
             <Grid item lg={12}><Typography className={classes.body2}>
               Offer: Combine any offer with Dineout Pay to save up to 10% more on your bill and also get 20% cashback.
             </Typography></Grid>
-
+            <Button className={classes.button2}>Reserve Table</Button>
           </CardContent>
         </Collapse>
 
