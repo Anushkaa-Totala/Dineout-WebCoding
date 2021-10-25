@@ -9,14 +9,14 @@
 .App-header {
   background-color: #282c34;
   color: white;
-  position: relative;
+  position: sticky;
   width: 100%;
 }
 
 .App-footer {
-  background-color: #282c34;
-  color: white;
-  position: sticky;
+  color: #282c34;
+  background-color: white;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;

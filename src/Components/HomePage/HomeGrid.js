@@ -7,6 +7,7 @@ import SuperSavers from './SuperSavers';
 import TopP from './TopPicks';
 import PopUp from './Dialog';
 import Promotionals from './Promotionals';
+import { Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,9 +33,9 @@ export default function HomeGrid() {
         </Grid>
 
         {/* adding all components sequentially in grids */}
-        <Grid item xs={11}>
+        <Hidden mdUp> <Grid item xs={11}> 
           <Promotionals />
-        </Grid>
+        </Grid>  </Hidden>
 
         <Grid item xs={11}>
           <BestOffers />

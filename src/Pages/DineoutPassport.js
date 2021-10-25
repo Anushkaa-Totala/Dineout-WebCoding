@@ -1,11 +1,10 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import HomeGrid from '../Components/HomePage/HomeGrid';
 import LabelBottomNavigation from '../Components/BottomNavigation';
 import SearchAppBar from '../Components/SearchAppBar';
 import { Hidden } from '@material-ui/core';
-import DesktopHomeGrid from '../Components/DesktopHome/DHomeGrid';
+import DPGrid from '../Components/DineoutPassport/DPGrid'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,21 +25,12 @@ export default function Home() {
     <div className="App">
       {/* Header (Navigation Bar) */}
       <header className="App-header">
-
-
         <Hidden mdUp>  <SearchAppBar /> </Hidden>
-
       </header>
 
       <Container>
         <React.Fragment>
-
-          <Hidden mdUp>
-            <HomeGrid className={classes.root} /> </Hidden>
-
-          <Hidden mdDown>
-            <DesktopHomeGrid />          </Hidden>
-
+          <DPGrid />
         </React.Fragment>
       </Container>
 
